@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PassPeek for jQuery, Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            code {
+                background: #cdcdcd;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>PassPeek for jQuery</h1>
+        <p>
+            Supports jQuery v1.x
+        </p>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Password field</legend>
+                
+                <label for="password">Password *</label>
+                <input type="password" name="password" id="password" />
+                
+            </fieldset>
+            <button>Submit</button>
+            <pre id="formData">
+            </pre>
+        </form>
+        <code>
+  // Example:-
+  jQuery(':password').passPeek({
+    strict: false,
+    labels: ['Show me', 'Hide me']
+  });</code>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="./pass-peek.js"></script>
+        <script type="text/javascript">
+        
+            jQuery(function(){
+               
+               jQuery(':password').passPeek({
+                   strict: false,
+                   labels: ['Show me', 'Hide me']
+               });
+               
+               jQuery('form').on('submit', function(e){
+                  
+                    e.preventDefault();
+                    
+                    jQuery('#formData').html(jQuery(this).serialize());
+                   
+               });
+        
+            });
+    
+        </script>
+    </body>
+</html>
