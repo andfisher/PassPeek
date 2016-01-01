@@ -71,7 +71,7 @@
                 // Do not show a link automatically
                 break;
             default:
-                // Treat is as a CSS selector to inject the link
+                // Treat this as a CSS selector to inject the link
                 $(_options.labelPosition).append($switch);
         }
         

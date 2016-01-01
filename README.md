@@ -1,2 +1,2 @@
-# PassPeek
-A plugin to enable showable password fields for a better mobile UX.
+# PassPeek (for jQuery)
+A jQuery plugin to enable showable password fields for a better mobile UX.
